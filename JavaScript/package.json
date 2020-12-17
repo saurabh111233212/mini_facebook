@@ -1,0 +1,30 @@
+{
+  "name": "g04",
+  "version": "1.0.0",
+  "description": "Final project for group G04.",
+  "main": "app.js",
+  "dependencies": {
+    "aws-sdk": "^2.794.0",
+    "bootstrap": "^4.5.3",
+    "cookie-parser": "^1.4.5",
+    "crypto-js": "^4.0.0",
+    "cytoscape": "^3.17.0",
+    "ejs": "^3.1.5",
+    "express": "^4.17.1",
+    "express-session": "^1.17.1",
+    "moment": "^2.24.0",
+    "node": "^15.2.1",
+    "socket.io": "^2.3.0",
+    "async": "^3.2.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "ssh://G04@nets212.cis.upenn.edu/git/nets212/G04"
+  },
+  "author": "",
+  "license": "ISC"
+}

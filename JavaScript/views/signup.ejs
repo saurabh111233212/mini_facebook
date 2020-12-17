@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<title>book creation</title>	
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style type="text/css">
+	body {
+		padding-top: 0px;
+		padding-bottom: 40px;
+		background-color: #99CAF6;
+		font-family: "Courier New", Courier, monospace;
+	}.login-box {
+		max-width: 330px;
+		margin: 0 auto;
+	}.login-box 
+	.form-control {
+		margin-bottom: 10px;
+	}
+    .alert {
+	  padding: 20px;
+	  background-color: #f44336;
+	  color: white;
+	}
+	.closebtn {
+	  margin-left: 15px;
+	  color: white;
+	  font-weight: bold;
+	  float: right;
+	  font-size: 22px;
+	  line-height: 20px;
+	  cursor: pointer;
+	  transition: 0.3s;
+	}
+	.closebtn:hover {
+	  color: black;
+	}
+	p {
+	  text-align:center; 
+	  vertical-align: middle;
+	}
+	
+</style>
+</head>
+<nav class="navbar navbar-expand-lg #0086FF bg-light">
+  <a class="navbar-brand" href="#"><b>book</b></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+</nav>
+<body>
+	<%if (message != null) { %>
+	  	<div class="alert">
+		  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+		  <strong>uh oh...</strong> <%= message %>
+		</div>
+  	<% } %>
+	<br>
+	<div class="login-box">
+		<h4><p style="color:#FFFFFF"><i>create a book account</i></p></h4>
+			<form action="/createaccount" method="post">
+				<input type="text" name="myFirstName" size="20" class="form-control" placeholder="book firstname">
+				<input type="text" name="myLastName" size="20" class="form-control" placeholder="book lastname">
+				<input type="email" name="myEmail" size="20" class="form-control" placeholder="email">
+				<input type="text" name="myUserInput" size="20" class="form-control" placeholder="username">
+				<input type="text" name="myPassInput" size="20" class="form-control" placeholder="password">
+				<input type="text" name="affiliation" size="20" class="form-control" placeholder="affiliation">
+				<input type="text" name="interests" size="20" class="form-control" placeholder="interests (seperated by commas)">
+				<b><p style="color: gray"><u>day of publication</u></p></b>
+				<p><input type="date" style="color: gray" name="myBirthday" id="bday" value="2000-01-01" min="1900-01-01" max="2020-31-12"></p>
+				</br>
+				<input type="submit" value="publish book" class="btn btn-lg btn-primary btn-block">
+			</form>
+			<br>
+			<p><button type="button" class="btn btn-outline-danger" onclick="back()">back to login</button></p>
+			<script>
+				function back()
+				{
+				     location.href = "/";
+				} 
+			</script>
+	</div>
+</body>
+</html>
